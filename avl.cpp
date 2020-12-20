@@ -187,7 +187,7 @@ void AVL::remove(int x, int y){
         return; 
     }
     removeHelper(x, y, root);
-    preorder();
+    //preorder();
     cout << x << "." << y << " deleted" << endl;
 }
 
@@ -271,16 +271,16 @@ void AVL::removeHelper(int x, int y, Node *n){
     }
     //cout << root->whole << endl;
     //preorder();
-    cout << "a" << endl;
+    //cout << "a" << endl;
     if (balance(n) > k){
-        cout<< "c" << endl;
+        //cout<< "c" << endl;
         if(balance(n->left) >= 0){
             rotateLeft(n);
         } else if (balance(n->left) < 0){
             rotateLeft2(n);
         }
     } else if (balance(n) < (k * -1)){
-        cout<< "d" << endl;
+        //cout<< "d" << endl;
         if(balance(n->right) <= 0){
             //cout<< "d" << endl;
             rotateRight(n);
@@ -289,8 +289,8 @@ void AVL::removeHelper(int x, int y, Node *n){
             rotateRight2(n);
         }
     }
-    cout << "b" << endl;
-    preorder();
+    //cout << "b" << endl;
+    //preorder();
     //cout << root->whole << root->fraction << endl; 
 }
 
